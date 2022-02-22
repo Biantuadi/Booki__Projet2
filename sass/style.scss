@@ -1,1 +1,73 @@
-@use "libs/index";
+@use "libs/index" as *;
+
+/* principale */
+
+*{
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+body{
+    padding-left: 30px;
+    padding-right: 30px;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+/* ****************** header ****************************** */
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    &__nav{
+        display: flex;
+        a{
+            padding: 45px 35px 0 35px;
+            margin-top: -7.8px;
+            font-size: 18px;
+        }
+    }
+    &__nav--active{
+        @extend %nav-link-effet;   
+    }
+    &__nav--hover{
+        &:hover{
+            @extend %nav-link-effet;
+        }
+    }
+    
+}
+@media #{$phone} {
+    body{
+        padding: 0;
+    }
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            padding-left: 60px;
+        }
+        &__nav{
+            width: 100%;
+        }
+        a{
+            padding: 0 0 23px 0;
+            text-align: center;
+        }
+        &__nav--active{
+            border-top: none;
+            border-bottom: solid 3.5px $primo ;
+            width: 50%;
+        }
+        &__nav--hover{
+            border-bottom: 3.5px solid #f2f2f2;
+            width: 50%;
+            &:hover{
+                display: none;
+            }
+        }
+    }
+    
+}
