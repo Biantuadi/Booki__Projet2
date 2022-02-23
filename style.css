@@ -32,9 +32,11 @@ body a {
   margin-top: -7.8px;
   font-size: 18px;
 }
+/* ****************** break-point ****************************** */
 @media only screen and (max-width:768px) {
   body {
     padding: 0;
+    margin: 0;
   }
 
   .header {
@@ -51,6 +53,7 @@ body a {
   .header a {
     padding: 0 0 23px 0;
     text-align: center;
+    margin: 0;
   }
   .header__nav--active {
     border-top: none;
@@ -63,6 +66,147 @@ body a {
   }
   .header__nav--hover:hover {
     display: none;
+  }
+}
+/* ************* sous-header *************** */
+.sous-header__search {
+  display: flex;
+  height: 55px;
+  margin-top: 20px;
+}
+.sous-header__search__box-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  height: 55px;
+  width: 45px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.sous-header__search__input {
+  border: #f2f2f2 solid 2.3px;
+  border-right: none;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.sous-header__search__btn {
+  border: none;
+  background-color: #0564f6;
+  color: white;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.sous-header__search__btn:hover {
+  background-color: #0346ab;
+  transition-duration: 0.35s;
+  cursor: pointer;
+}
+.sous-header__search__btn--ico-recherche {
+  display: none;
+}
+
+/* break point 
+****************************************************************************************/
+@media only screen and (max-width:768px) {
+  .sous-header__search {
+    height: 65px;
+    justify-content: center;
+  }
+  .sous-header__search__box-icon {
+    height: 65px;
+    width: 55px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .sous-header__search__input {
+    border-right: none;
+    width: 245px;
+    font-size: 19px;
+  }
+  .sous-header__search__btn--rchercher {
+    display: none;
+  }
+  .sous-header__search__btn--ico-recherche {
+    display: flex;
+    width: 50px;
+    justify-content: center;
+  }
+  .sous-header__search__btn {
+    border-radius: 11px;
+  }
+  .sous-header__search__btn:hover {
+    display: none;
+  }
+}
+/* Les filtres */
+.sous-header__filtres {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px;
+}
+.sous-header__filtres i {
+  color: #0564f6;
+}
+.sous-header__filtres div:hover .sous-header__filtres__Economique__box-icon, .sous-header__filtres div:hover .sous-header__filtres__Animaux__box-icon, .sous-header__filtres div:hover .sous-header__filtres__Romantique__box-icon, .sous-header__filtres div:hover .sous-header__filtres__Familial__box-icon {
+  background: white;
+  border: 2.5px solid #f2f2f2;
+  border-right: none;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+.sous-header__filtres__Economique, .sous-header__filtres__Animaux, .sous-header__filtres__Romantique, .sous-header__filtres__Familial {
+  border: 2.5px #f2f2f2 solid;
+  border-left: none;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  height: 55px;
+  margin: 20px;
+  font-weight: bold;
+  padding-right: 12px;
+  width: 183px;
+}
+.sous-header__filtres__Economique__box-icon, .sous-header__filtres__Animaux__box-icon, .sous-header__filtres__Romantique__box-icon, .sous-header__filtres__Familial__box-icon {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #DEEBFF;
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+.sous-header__filtres__Economique:hover, .sous-header__filtres__Animaux:hover, .sous-header__filtres__Romantique:hover, .sous-header__filtres__Familial:hover {
+  color: white;
+  background: #0564f6;
+  transition-duration: 0.25s;
+  cursor: pointer;
+}
+.sous-header__filtres__Familial {
+  width: 149px;
+}
+.sous-header__filtres__Romantique {
+  width: 180px;
+}
+.sous-header__filtres__Animaux {
+  width: 227px;
+}
+/* break point 
+************************************
+************************************
+****************/
+@media only screen and (max-width:768px) {
+  .sous-header__filtres {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 15px;
+  }
+  .sous-header__filtres__Economique, .sous-header__filtres__Familial, .sous-header__filtres__Romantique, .sous-header__filtres__Animaux {
+    margin: 8px;
   }
 }
 

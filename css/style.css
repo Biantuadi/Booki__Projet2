@@ -311,7 +311,7 @@ a.hebergement-lien, a.activites:hover{
     cursor: pointer;
     background: #0564f6;
     transition-duration: 0.25s;
-    color: white;
+    /* color: white; */
   }
 
 /* break point 

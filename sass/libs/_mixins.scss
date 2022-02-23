@@ -1,0 +1,47 @@
+@mixin flex-center($direction:row) {
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin width-specific($size:50%) {
+    width: $size;
+}
+
+@mixin raduis-left($raduis:10px) {
+    border-bottom-left-radius: $raduis;
+    border-top-left-radius: $raduis;
+}
+@mixin raduis-right($raduis:10px) {
+    border-bottom-right-radius: $raduis;
+    border-top-right-radius: $raduis;
+}
+
+@mixin hover($trans-value:0.35s) {
+    transition-duration: $trans-value;
+    cursor: pointer;
+}
+@mixin filtres-proprietes($color: #f2f2f2) {
+    border: 2.5px $color solid;
+    border-left: none;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-radius: 30px;
+    height: 55px;
+    margin: 20px;
+    font-weight: bold;
+    padding-right: 12px;
+}
+@mixin box-icon($color: #DEEBFF) {
+    display: flex;
+    background-color: $color;
+    height: 55px;
+    width: 55px;
+    border-radius: 50%;
+}
+@mixin box-icon-hover {
+    background: white;
+    border: 2.5px solid #f2f2f2;
+    border-right: none;
+}
