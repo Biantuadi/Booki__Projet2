@@ -88,7 +88,7 @@ body a {
 .sous-header__search__input {
   border: #f2f2f2 solid 2.3px;
   border-right: none;
-  font-weight: bold;
+  font-weight: 501;
   padding-left: 10px;
 }
 .sous-header__search__btn {
@@ -123,7 +123,7 @@ body a {
   .sous-header__search__input {
     border-right: none;
     width: 245px;
-    font-size: 19px;
+    font-size: 16px;
   }
   .sous-header__search__btn--rchercher {
     display: none;
